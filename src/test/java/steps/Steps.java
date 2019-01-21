@@ -36,13 +36,7 @@ public class Steps {
         telaInicial = new TelaInicial(session);
         scenario.embed(session.getScreenshot(), "image/png");
 	}
-
-	@Quando("^eu informar \"([^\"]*)\" no campo correspondente a linha (\\d+) e coluna (\\d+)$")
-	public void euInformarNoCampoCorrespondenteALinhaEColuna(String login, int linha, int col) throws Throwable {
-		telaInicial.setLogin(login, linha, col);
-        scenario.embed(session.getScreenshot(), "image/png");
-	}
-
+	
 	@Quando("^informar \"([^\"]*)\" no campo senha$")
 	public void informarNoCampoSenha(String senha) throws Throwable {
 		telaInicial.setSenha(senha);
